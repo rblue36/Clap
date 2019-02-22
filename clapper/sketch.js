@@ -30,8 +30,7 @@ function setup() {
     canvas = createCanvas(640, 480);
     video = createCapture(VIDEO);
     video.hide();
-    canvas.position(0, 100)
-    //  video.position();
+    canvas.position(5, 100)
     shiffman.position(700, 140);
     console.log(ml5);
     let poseNet = ml5.poseNet(video, modelReady);
@@ -87,8 +86,8 @@ function draw() {
 
     let eyedistance = dist(eyeleftX, eyeleftY, eyerightX, eyerightY);
     let wristdistance = dist(wristleftX, wristleftY, wristrightX, wristrightY);
-    console.log("Eye Distance:" + eyedistance);
-    console.log("Wrist Distance" + wristdistance);
+ //   console.log("Eye Distance:" + eyedistance);
+//  console.log("Wrist Distance" + wristdistance);
     leftwristellipse = ellipse(wristleftX, wristleftY, 0.5 * eyedistance);
     rightwristellipse = ellipse(wristrightX, wristrightY, 0.5 * eyedistance);
 
